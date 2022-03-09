@@ -141,7 +141,7 @@ public class Solution {
         }
 
         static int dist(int x, int y, int x1, int y1){
-            return (int) Math.sqrt(Math.pow(x - x1, 2) + Math.pow(y - y1, 2));
+            return Math.abs(x - x1) + Math.abs(y - y1);
         }
 
 
