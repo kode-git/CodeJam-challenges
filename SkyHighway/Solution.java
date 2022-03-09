@@ -31,21 +31,23 @@ public class Solution {
 
     // Algorithm here
     static class ProblemSolver {
-        static int width;
-        static int height;
-        static int reward;
-        static int[] x;
-        static int[] y;
-        static int[] latency;
-        static int numAntenna;
-        static int numBuild;
-        static int[] connSpeed;
-        static int[] antRange;
-        static int[] antSpeed;
-        static int[][] matrix;
-        static int[][] coordAnt;
-        static int[] antCov; 
-        static int[] antRew;
+        int width;
+        int height;
+        int reward;
+        int[] x;
+        int[] y;
+        int[] latency;
+        int numAntenna;
+        int numBuild;
+        int[] connSpeed;
+        int[] antRange;
+        int[] antSpeed;
+        int[][] matrix;
+        int[][] coordAnt;
+        int[] antCov; 
+        int[] antRew;
+        int[] ids;
+        int placed;
 
         public void solve(InputReader in, OutputWriter out) {
             width = in.nextInt();
@@ -62,9 +64,8 @@ public class Solution {
             coordAnt = new int[2][numAntenna];
             antCov = new int[numAntenna];
             antRew = new int[numAntenna];
-            
-            int[] ids = new int[numAntenna];
-            int placed = 0;
+            ids = new int[numAntenna];
+            placed = 0;
 
             for(int i = 0; i < numBuild; i++){
                 x[i] = in.nextInt();
@@ -105,7 +106,7 @@ public class Solution {
                         int cov = 0;
                         for(int q = 0; q < numBuild; q++){
                             int dist = dist(x[q], y[q], curX, curY);
-                            if(dist < antRange[i]){
+                            if(dist < antRange[i] && connSpeed[q] <= antSpeed[i]){
                                 cov++;
                             }
                         }
@@ -129,7 +130,8 @@ public class Solution {
             }
 
             }
-            out.printf("%d\n", placed);
+        
+            out.printf("\n%d", placed);
             for(int i = 0; i < numAntenna; i++){
                 if(ids[i] > 0){
                     out.printf("\n%d %d %d", i, coordAnt[0][i], coordAnt[1][i]);
