@@ -1,0 +1,54 @@
+1. Problem Statement
+
+You are given the description of a city, represented by a bidimensional grid of
+width W and height H.
+On this grid, a series of buildings are positioned and your goal is to place
+the available antennas in the best positions, according to requirements of each
+building, in order to connect the city in the best way to the 5G ecosystem.
+
+1.1. Building
+
+A total of N buildings are already positioned on the grid, each of them in a
+distinct location and needs connection.
+As buildings are of various types also their connection needed can be different,
+in particular each building characterized by the three factors:
+• Its position on the grid.
+• Latency weight: how important is the latency for the building.
+• Connection speed weight: how important is the connection speed for
+the building.
+
+1.2. Antenna 
+
+A total of M of antennas are available to be freely placed on the grid to give
+connectivity to the neighborhood.
+As also antennas can be of various types, each of them is characterized by two
+factors:
+• Range: the distance that the antenna signal can reach.
+• Connection speed: the connection speed provided to the building connected to it.
+Refer to the scoring section for the details.
+Note that an antennas will provide the same ammount of connection speed to
+all the buildings connected to it, regardless of the number of buildings.
+
+1.3 Reward
+
+As one of the goal of the 5G ecosystem is to reduce the digital divide, a
+reward of R points will be assigned to the final score only if all the buildings
+are connected to at least one antenna.
+
+1.4 Input format
+
+15 10  // Width and height of the grind
+5 4 100 // number of building, antennas and quantity of reward if all building are connected
+0 7 3 20 // coordinates (x,y),  latency weight and connection speed of the first building
+12 2 2 14 
+2 4 1 32 
+10 7 4 44 
+11 8 3 23 // last building info
+2 100 // range and connection speed of the first antenna
+4 10
+1 50
+2 40 // last antenna
+
+1.5 Output format
+// number of antennas placed
+// M lines with (x,y) of the antenna coordinates with M the number of placed antenna
