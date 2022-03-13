@@ -17,7 +17,7 @@ import java.lang.Math;
  *
  * @author kode
  */
-public class Solution {
+public class SkyHighway {
     public static void main(String[] args) {
         InputStream inputStream = System.in;
         OutputStream outputStream = System.out;

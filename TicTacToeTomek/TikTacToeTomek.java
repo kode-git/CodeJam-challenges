@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 
  * @author kode
  */
-public class Solution {
+public class TikTacToeTomek {
     private static final boolean DEBUG = false;
     private static String solve(int count, int dim,  char[][] matrix) {
         int result = 0;
