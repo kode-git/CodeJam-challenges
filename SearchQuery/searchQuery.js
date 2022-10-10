@@ -15,7 +15,8 @@ function solver(repository, query){
         tempValue = [];
         sugg = 0
         for(let j = 0; j < repository.length; j++){
-            if(repository[j].startsWith(temporalQuery) && sugg < 3){
+            repository[j] = repository[j].toLowerCase()
+            if(repository[j].startsWith(temporalQuery.toLowerCase()) && sugg < 3){
                 tempValue.push(repository[j])
                 sugg++;
             }
@@ -28,7 +29,7 @@ function solver(repository, query){
 
 
 function run(){
-  let output = solver(["mobile", "mouse", "moneypot", "monitor", "mousepad"], 'mouse')
+  let output = solver(["mObile", "mouse", "moneypot", "monitor", "mousepad"], 'mouse')
   console.log(output)
 }
 
