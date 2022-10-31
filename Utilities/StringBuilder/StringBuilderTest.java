@@ -102,4 +102,25 @@ public class StringBuilderTest {
         Assert.assertEquals(true, stringBuilder.isPermutation(null, null));
         Assert.assertEquals(false, stringBuilder.isPermutation(null, "olleH"));
     }
+
+    @Test
+    public void testCharChange() {
+        Assert.assertEquals("Hello%World", stringBuilder.changeChar("Hello World", ' ', '%'));
+        Assert.assertEquals("Hello World", stringBuilder.changeChar("Hello World", 'q', '%'));
+    }
+
+    @Test
+    public void testIsPalindrome() {
+        Assert.assertEquals(true, stringBuilder.isPalindrome("ABA"));
+        Assert.assertEquals(true, stringBuilder.isPalindrome("ABBA"));
+        Assert.assertEquals(false, stringBuilder.isPalindrome("ABCA"));
+        Assert.assertEquals(true, stringBuilder.isPalindrome(""));
+        Assert.assertEquals(true, stringBuilder.isPalindrome(null));
+    }
+
+    @Test
+    public void testIsReverse() {
+        Assert.assertEquals(true, stringBuilder.isReverse("ABC", "CBA"));
+        Assert.assertEquals(false, stringBuilder.isReverse("ABB", "CBA"));
+    }
 }

@@ -3,6 +3,8 @@ package StringBuilder;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.net.ssl.TrustManager;
+
 public class StringBuilder implements Cloneable {
 
     ArrayList<String> values;
@@ -109,6 +111,65 @@ public class StringBuilder implements Cloneable {
         }
 
         return true;
+    }
+
+    public String changeChar(String s, char x, char y) {
+        if (s == null || s == "") {
+            return s;
+        }
+        if (s.indexOf("" + x) != -1) {
+            char[] chars = s.toCharArray();
+            String output = "";
+            for (char charEl : chars) {
+                if (charEl == x) {
+                    output += "" + y;
+                } else {
+                    output += "" + charEl;
+                }
+            }
+            return output;
+        } else {
+            return s;
+        }
+    }
+
+    public Boolean isReverse(String a, String b) {
+        if (a == null && b == null)
+            return true;
+        if (a == null || b == null)
+            return false;
+
+        if (a.length() != b.length()) {
+            return false;
+        }
+        char[] ac = a.toCharArray();
+        char[] bc = b.toCharArray();
+
+        int n = ac.length;
+        for (int i = 0; i < n; i++) {
+            if (ac[i] != bc[n - i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public Boolean isPalindrome(String a) {
+        if (a == null || a == "") {
+            return true;
+        } else {
+            char[] x = a.toCharArray();
+            String reverse = "";
+            for (int i = 0; i < x.length; i++) {
+                reverse += x[x.length - i - 1];
+            }
+            
+            if (reverse.equals(a)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     @Override
