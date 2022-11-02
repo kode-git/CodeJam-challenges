@@ -1,12 +1,10 @@
-
-
-class Stack():
+class Queue():
 
     def __init__(self):
         self.data = list()
 
     def push(self, item):
-        self.data = self.data + [item]
+        self.data = [item] + self.data 
     
     def peek(self):
         if self._isEmpty():
@@ -22,4 +20,6 @@ class Stack():
 
     def _isEmpty(self):
         return len(self.data) == 0
-        
+
+
+
