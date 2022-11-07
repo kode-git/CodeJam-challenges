@@ -1,4 +1,4 @@
-from stack import Stack
+from src.stack import Stack
 
 class StackTest():
 

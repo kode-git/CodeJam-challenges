@@ -1,5 +1,5 @@
 
-from node import Node
+from src.tree_node import Node
 
 class Tree():
 

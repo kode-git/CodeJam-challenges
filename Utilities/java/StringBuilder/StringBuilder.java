@@ -1,4 +1,4 @@
-package StringBuilder;
+package java.StringBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;

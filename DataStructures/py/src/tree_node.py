@@ -1,11 +1,13 @@
 
 
-class  Node():
+# it is only for tree node
+class  TreeNode():
 
     def __init__(self):
         self.value = 0
         self.right = None
         self.left = None
+        self.parent = None # for bfs
 
     def get_value(self):
         return self.value
@@ -20,10 +22,10 @@ class  Node():
         return self.left
 
     def set_right(self, node):
-        if type(node) == type(Node()):
+        if type(node) == type(TreeNode()):
             self.right = node
     
     def set_left(self, node):
-        if type(node) == type(Node()):
+        if type(node) == type(TreeNode()):
             self.left = node
     

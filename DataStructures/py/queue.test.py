@@ -1,4 +1,4 @@
-from queue import Queue
+from src.queue import Queue
 
 
 class QueueTest():
