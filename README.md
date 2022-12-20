@@ -4,7 +4,14 @@ Welcome to Gym, a repository for coding interview training. This repository is i
 
 ## Contents
 
-Gym contains a variety of coding challenges, algorithms and data structures organized by difficulty and topic. Each challenge includes a prompt and sample test cases, as well as one or more solutions in a range of programming languages.
+Gym contains a variety of coding challenges, algorithms and data structures organized by three main directories. Each challenges contains one or more function and a local runtime to test the solution on despite use cases. Feel free to improve the code if you have a less complex and efficient solution. 
+In the following table, we will resume the structure of the main repository
+
+| Folder | Scope | Description |
+|----------|----------|----------|
+| data | Data Structures | Defines a list of classes and snippet of code to generate various data structures used in algorithms. |
+| challenges | Challenges and Problem Solving | This folder contains various problems with a single test case inside a main function, you can improve the complexity of code adding some alternative solution. |
+| algo | Algorithms | Defines a list of implemented algoritms connected to main concepts defines in the literature. |
 
 ## How to Use
 
