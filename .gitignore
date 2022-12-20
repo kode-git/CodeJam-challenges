@@ -551,4 +551,14 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij,visualstudiocode,visualstudio
+
