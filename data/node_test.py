@@ -21,5 +21,5 @@ class NodeTest(TestCase):
     
     def test_get_node(self):
         self.assertEqual(node.get_next_node(), node.next_node)
-        
+    
 
